@@ -1,30 +1,36 @@
-# 📊 Student Performance Analysis Project
+# 💄 Cosmetics Product Analysis Project
 
 ## 📌 Project Overview
 
-This project analyzes student academic performance using demographic, socioeconomic, and academic preparation factors. The analysis combines **Python-based Exploratory Data Analysis (EDA)** and an **interactive Power BI dashboard** to uncover key insights affecting student outcomes in **Math, Reading, and Writing**.
+This project analyzes cosmetics product data using **pricing, customer ratings, reviews, product usage patterns, and ethical factors**.
+The analysis combines **Python-based Exploratory Data Analysis (EDA)** and an **interactive Power BI dashboard** to uncover key insights related to **customer preferences, product positioning, and market trends** in the cosmetics industry.
 
 ---
 
 ## 🎯 Project Objectives
 
-* Analyze student performance across different demographic groups
-* Measure the impact of test preparation on overall academic performance
-* Understand how socioeconomic factors such as lunch type and parental education affect scores
+* Analyze cosmetics products based on **price, rating, and number of reviews**
+* Understand **gender-wise and skin-type-wise product preferences**
+* Study the impact of **cruelty-free products** on brand usage
+* Identify trends in **ingredients, product size, packaging, and usage frequency**
 * Present insights using clear visualizations and an interactive dashboard
 
 ---
 
 ## 🗂️ Dataset Description
 
-The dataset contains student-level academic and background information, including:
+The dataset contains product-level information related to cosmetics, including:
 
-* **Academic Scores:** Math Score, Reading Score, Writing Score
-* **Demographics:** Gender, Race/Ethnicity
-* **Socioeconomic Factors:** Lunch Type, Parental Level of Education
-* **Academic Support:** Test Preparation Course
+* **Product Details:** Product_Name, Brand, Category, Product_Size, Packaging_Type
+* **Customer Metrics:** Rating, Number_of_Reviews
+* **Pricing:** Price_USD
+* **Target Audience:** Gender_Target, Skin_Type
+* **Ethical Factors:** Cruelty_Free
+* **Usage Patterns:** Usage_Frequency
+* **Geography:** Country_of_Origin
+* **Ingredients:** Main_Ingredient
 
-Each row represents an individual student.
+Each row represents a single cosmetic product.
 
 ---
 
@@ -32,11 +38,9 @@ Each row represents an individual student.
 
 The following preprocessing steps were performed using Python:
 
-* Renamed columns for better readability
-* Standardized categorical values (case formatting)
-* Consolidated parental education categories
-* Treated missing values in *Test Preparation* as **"Not Completed"**
-* Verified and corrected data types
+* Verified dataset shape, columns, and missing values
+* Converted **Usage_Frequency** into a numeric scale for analysis
+* Converted **Cruelty_Free** into numeric format
 * Saved a cleaned version of the dataset for visualization and reporting
 
 ---
@@ -45,35 +49,39 @@ The following preprocessing steps were performed using Python:
 
 EDA was conducted using **Pandas, Matplotlib, and Seaborn**, covering:
 
-* Gender-wise performance comparison
-* Test preparation vs academic performance
-* Lunch type impact on student scores
-* Parental education influence on performance
-* Score distributions, correlations, and outlier detection
+* Top 5 most used products
+* Category usage by gender
+* Skin type vs brand and ingredient preference
+* Price vs rating and review analysis
+* Product size and packaging preference
+* Usage frequency distribution
+* Country-wise brand distribution
+* Correlation analysis using heatmaps
 
 ---
 
 ## 📈 Power BI Dashboard
 
-An interactive Power BI dashboard was created to visualize key insights:
+An interactive **Power BI dashboard** was created to visualize key insights:
 
-* KPI cards for average Math, Reading, and Writing scores
-* Overall average score comparison by test preparation status
-* Performance comparison by gender and lunch type
-* Interactive filters for parental education and race
+* KPI cards for **Average Price, Average Rating, and Average Reviews**
+* Usage frequency analysis
+* Ingredient-wise average price trends
+* Product size and packaging distribution
+* Gender and skin-type based comparisons
+* Interactive filters for **Brand, Category, Product Name, and Country**
 
-📸 **Dashboard Preview:**
-`images/img.png`
+📸 **Dashboard Preview:** `images/img.png`
 
 ---
 
 ## 🔍 Key Insights
 
-* Students who completed test preparation scored significantly higher overall
-* Female students performed better in Reading and Writing
-* Lunch type (as a socioeconomic indicator) impacts academic performance
-* Parental education shows a moderate influence on student outcomes
-* Math, Reading, and Writing scores are strongly correlated
+* Daily-use products dominate the cosmetics market
+* High ratings do not always correspond to higher review counts
+* Certain ingredients such as **Retinol and Vitamin C** are priced higher
+* Product preferences vary significantly by **skin type and gender**
+* Cruelty-free products show strong market presence
 
 ---
 
@@ -81,10 +89,10 @@ An interactive Power BI dashboard was created to visualize key insights:
 
 Detailed project reports are available in the repository:
 
-* 📄 **PDF:** `reports/student_analysis.pdf`
-* 📝 **DOCX:** `reports/student_analysis.docx`
+* 📄 **PDF:** `reports/cosmetics.pdf`
+* 📝 **DOCX:** `reports/cosmetics.docx`
 
-The report explains the analysis, insights, and conclusions in detail.
+The reports explain the analysis, insights, and conclusions in detail.
 
 ---
 
@@ -100,19 +108,19 @@ The report explains the analysis, insights, and conclusions in detail.
 ## 📁 Repository Structure
 
 ```
-Student_Performance_Analysis/
+Cosmetics_Product_Analysis/
 ├── data/
-│   └── StudentsPerformance.csv
+│   └── cosmetics.csv
 ├── notebooks/
 │   ├── data_cleaning.ipynb
 │   └── visualization.ipynb
 ├── powerbi/
-│   └── student_analysis.pbix
+│   └── cosmetics.pbix
 ├── images/
 │   └── img.png
 ├── reports/
-│   ├── student_analysis.docx
-│   └── student_analysis.pdf
+│   ├── cosmetics.docx
+│   └── cosmetics.pdf
 ├── README.md
 ```
 
@@ -122,10 +130,9 @@ Student_Performance_Analysis/
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/manasi-2408/Student_Performance_Analysis.git
-```
-
+   ```
+   git clone https://github.com/manasi-2408/Cosmetics_Analysis.git
+   ```
 2. Open and run the notebooks inside the `notebooks/` folder
 3. Open the Power BI file (`.pbix`) to explore the interactive dashboard
 4. Read the detailed report for complete insights
@@ -134,16 +141,16 @@ git clone https://github.com/manasi-2408/Student_Performance_Analysis.git
 
 ## 📌 Conclusion
 
-This project demonstrates an end-to-end data analysis workflow — from data cleaning and exploration to visualization and reporting. The insights highlight the importance of academic preparation and socioeconomic factors in student performance and support data-driven decision-making in education.
+This project demonstrates an **end-to-end data analysis workflow** — from data cleaning and exploratory analysis to visualization and reporting.
+The insights help understand **customer behavior, pricing strategies, and product positioning** in the cosmetics industry, supporting data-driven decision-making.
 
 ---
 
-⭐ *If you found this project useful, feel free to star the repository.*
+⭐ **If you found this project useful, feel free to star the repository.**
 
 ---
 
-### 👩‍💻 Author
+## 👩‍💻 Author
 
 **Manasi**
 GitHub: [https://github.com/manasi-2408](https://github.com/manasi-2408)
-student_analysis
